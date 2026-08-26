@@ -1,12 +1,14 @@
 const express = require('express');
 const cors = require('cors');
+//const config = require('./config/index');
+const { dataSource } = require('./db/data-source');
 const appError = require('./util/appError');
+
 const skill = require('./routes/skill');
 const credit_package = require('./routes/credit_package');
 const users = require('./routes/user');
 const adminCoach = require("./routes/admin_coach")
-//const config = require('./config/index');
-const { dataSource } = require('./db/data-source');
+
 
 const app = express();
 app.use(cors());    
@@ -26,7 +28,11 @@ app.get('/healthcheck', async (req, res,next) => {
 app.use('/api/coaches/skill', skill);
 app.use('/api/credit-package', credit_package);
 app.use('/api/users', users);
-app.use("/api/admin/coaches", adminCoach);
+//app.use("/api/admin/coaches/courses", require("./routes/adminCourses")); // ②
+//app.use("/api/admin/coaches/revenue", require("./routes/adminRevenue")); // ③
+app.use('/api/admin/coaches', adminCoach);
+//app.use("/api/coaches", require("./routes/coaches")); // ⑤ 含 /:coachId
+//app.use("/api/courses", require("./routes/courses"));
 
 
 // 404（W3）

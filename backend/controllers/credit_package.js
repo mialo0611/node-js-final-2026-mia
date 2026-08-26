@@ -5,7 +5,7 @@ const { isValidString } = require("../util/validation");
 const creditPackageController = {
   async getCreditPackages(req, res, next) {
     try {
-    const creditPackages = await dataSource.getRepository('Credit_package').find({
+    const creditPackages = await dataSource.getRepository('CreditPackage').find({
       select: { id: true, name: true, credit_amount: true, price: true },
       order: { name: 'ASC' },
     });
@@ -32,7 +32,7 @@ const creditPackageController = {
       return;
     }
 
-    const creditPackageRepo = dataSource.getRepository('Credit_package');
+    const creditPackageRepo = dataSource.getRepository('CreditPackage');
     //2.組合包名稱不能重覆
     const existing = await creditPackageRepo.findOneBy({ name: name.trim() });
     if (existing) {
@@ -50,7 +50,7 @@ const creditPackageController = {
   async deleteCreditPackage(req, res, next) {
     try {
       const { creditPackageId } = req.params;
-      const result = await dataSource.getRepository('Credit_package').delete(creditPackageId);
+      const result = await dataSource.getRepository('CreditPackage').delete(creditPackageId);
       if (result.affected === 0) {
         next(appError(400, 'ID錯誤'));
         return;

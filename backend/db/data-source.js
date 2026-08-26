@@ -6,7 +6,10 @@ const config = require('../config/index');
 const User = require('../entities/User');
 const Coach = require('../entities/Coach');
 const Skill = require('../entities/Skill');
-const Credit_package = require('../entities/Credit_package');
+const CreditPackage = require('../entities/CreditPackage');
+const CoachSkill = require('../entities/CoachSkill');
+const Course = require('../entities/Course');
+
 
 const dataSource = new DataSource({
   type: 'postgres',
@@ -22,7 +25,9 @@ const dataSource = new DataSource({
     User,
     Coach,
     Skill,    
-    Credit_package,
+    CreditPackage,
+    CoachSkill,
+    Course,
   ],
 });
 

@@ -1,7 +1,7 @@
 const { EntitySchema } = require('typeorm')
 
 module.exports = new EntitySchema({
-  name: 'Credit_package',        // 程式裡的名字：getRepository('Skill') 用它
+  name: 'CreditPackage',        // 程式裡的名字：getRepository('Skill') 用它
   tableName: 'credit_package',  // 資料庫裡實際的表名
   columns: {
     id: {

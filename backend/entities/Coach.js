@@ -40,7 +40,10 @@ module.exports = new EntitySchema({
     user: {
       type: 'one-to-one',
       target: 'User', // ← 對應 Entity 的 name，不是 tableName
-      joinColumn: { name: 'user_id' }, // ← 對應本表的欄位名
+      joinColumn: { 
+        name: 'user_id' , // ← 對應本表的欄位名
+        referencedColumnName: 'id',
+      }, 
     },
   },
 });
