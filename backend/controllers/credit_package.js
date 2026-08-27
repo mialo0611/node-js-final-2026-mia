@@ -61,7 +61,6 @@ const creditPackageController = {
       next(error);
     }
   },
-<<<<<<< HEAD
   //M5-1 POST /api/credit-package/{creditPackageId}
   async purCreditPackage(req,res,next){
     const {creditPackageId} = req.params ;
@@ -88,8 +87,4 @@ const creditPackageController = {
 
   }
 };
-=======
-};
-
->>>>>>> fe83bb73170d2a2c09193574f283a41dbdce4b06
 module.exports = creditPackageController;

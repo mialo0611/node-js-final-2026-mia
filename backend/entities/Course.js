@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 /* "id": "5e3b1f0a-9c1d-4e2f-8a7b-1c2d3e4f5a6b",
       "name": "重訓基礎入門",
@@ -12,7 +10,6 @@
       "participants": 2 
       */
 
->>>>>>> fe83bb73170d2a2c09193574f283a41dbdce4b06
 const { EntitySchema } = require('typeorm')
 
 module.exports = new EntitySchema({
@@ -31,14 +28,11 @@ module.exports = new EntitySchema({
       nullable: false,   
       unique: true,   
     },  
-<<<<<<< HEAD
     description: {
       type: 'varchar',
       length: 100,
       nullable: true,       
     }, 
-=======
->>>>>>> fe83bb73170d2a2c09193574f283a41dbdce4b06
     user_id: 
     {
       type: 'uuid', 
