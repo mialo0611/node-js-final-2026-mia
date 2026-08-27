@@ -43,7 +43,7 @@ describe('M3 升級教練與教練後台', () => {
       const user = await signupAndLogin();
 
       const res = await promoteToCoach(user.userId);
-      expectSuccess(res);
+      expectSuccess(res);      
 
       // 行為驗證：升級真的生效 —— 重新登入拿新身分，教練後台要進得去
       const { token } = await login(user.email, user.password);

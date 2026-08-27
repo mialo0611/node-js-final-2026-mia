@@ -7,9 +7,13 @@ const appError = require('./util/appError');
 const skill = require('./routes/skill');
 const credit_package = require('./routes/credit_package');
 const users = require('./routes/user');
+<<<<<<< HEAD
 const adminCoach = require('./routes/admin_coach');
 const coaches = require('./routes/coaches');
 const courses = require('./routes/course');
+=======
+const adminCoach = require("./routes/admin_coach")
+>>>>>>> fe83bb73170d2a2c09193574f283a41dbdce4b06
 
 
 const app = express();

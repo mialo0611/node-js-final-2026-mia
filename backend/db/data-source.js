@@ -9,7 +9,10 @@ const Skill = require('../entities/Skill');
 const CreditPackage = require('../entities/CreditPackage');
 const CoachSkill = require('../entities/CoachSkill');
 const Course = require('../entities/Course');
+<<<<<<< HEAD
 const CreditPurchase = require('../entities/CreditPurchase');
+=======
+>>>>>>> fe83bb73170d2a2c09193574f283a41dbdce4b06
 
 
 const dataSource = new DataSource({
@@ -29,7 +32,10 @@ const dataSource = new DataSource({
     CreditPackage,
     CoachSkill,
     Course,
+<<<<<<< HEAD
     CreditPurchase,
+=======
+>>>>>>> fe83bb73170d2a2c09193574f283a41dbdce4b06
   ],
 });
 
