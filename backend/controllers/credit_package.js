@@ -64,17 +64,19 @@ const creditPackageController = {
   //M5-1 POST /api/credit-package/{creditPackageId}
   async purCreditPackage(req,res,next){
     const {creditPackageId} = req.params ;
+    const userId = req.user.id ;
     const cpRepo = dataSource.getRepository('CreditPackage');
     const getCP = await cpRepo.findOneBy({id:creditPackageId});
     if (!getCP){
       return next(appError(400),'ID錯誤');
     }
+    console.log(getCP.credit_amount);
 
     const purCPRepo = dataSource.getRepository('CreditPurchase');
     const purCPdata = await purCPRepo.save({
-      user_id : req.user.id,
+      user_id : userId,
       credit_package_id:getCP.id,
-      purchase_credit:getCP.credit_amount,
+      purchased_credits:getCP.credit_amount,
       price_paid:getCP.price
     });
     if (!purCPdata){

@@ -79,7 +79,7 @@ module.exports = new EntitySchema({
     },  
     updated_at:{
       type: 'timestamp', 
-      createDate: true,
+      updateDate: true,
     }
   },  
   relations: {

@@ -6,5 +6,5 @@ router.get('/', creditPackageController.getCreditPackages);
 router.post('/', creditPackageController.postCreditPackage);
 router.delete('/:creditPackageId', creditPackageController.deleteCreditPackage);
 
-router.post('/:creditPackageId',creditPackageController.purCreditPackage);
+router.post('/:creditPackageId',isAuth,creditPackageController.purCreditPackage);
 module.exports = router;

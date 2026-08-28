@@ -31,7 +31,7 @@ app.use('/api/coaches/skill', skill);
 app.use('/api/users', users);
 app.use('/api/credit-package', credit_package);
 
-//app.use("/api/admin/coaches/courses", require("./routes/adminCourses")); // ②
+
 //app.use("/api/admin/coaches/revenue", require("./routes/adminRevenue")); // ③
 app.use('/api/admin/coaches', adminCoach);
 app.use("/api/coaches", coaches); // ⑤ 含 /:coachId

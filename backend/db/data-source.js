@@ -10,6 +10,7 @@ const CreditPackage = require('../entities/CreditPackage');
 const CoachSkill = require('../entities/CoachSkill');
 const Course = require('../entities/Course');
 const CreditPurchase = require('../entities/CreditPurchase');
+const CourseBooking = require('../entities/CourseBooking');
 
 
 const dataSource = new DataSource({
@@ -30,6 +31,7 @@ const dataSource = new DataSource({
     CoachSkill,
     Course,
     CreditPurchase,
+    CourseBooking
   ],
 });
 

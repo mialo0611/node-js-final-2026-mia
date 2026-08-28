@@ -9,4 +9,7 @@ router.get('/profile', isAuth, userController.profile);
 router.put('/profile', isAuth, userController.updateProfile);
 router.put('/password', isAuth, userController.updatePassword);
 
+router.get('/credit-package', isAuth, userController.getMyCreditPackage);
+router.get('/courses', isAuth, userController.getMyCourses);
+
 module.exports = router;

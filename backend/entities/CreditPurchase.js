@@ -19,7 +19,7 @@ module.exports = new EntitySchema({
       type: 'uuid', 
       nullable: false,      
     },
-    purchased_credit: {
+    purchased_credits: {
       type: 'integer',
       nullable: false,
     },
