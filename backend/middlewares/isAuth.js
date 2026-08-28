@@ -21,8 +21,8 @@ async function isAuth(req, res, next) {
             return next(appError(401, '無效的 token123'));
         }
         req.user = getUser; 
-        //console.log(`req.user: ${JSON.stringify(req.user)}`);
-        console.log (`token ${token}`);
+        
+        //console.log (`token ==>  ${token}`);
         next();
     }catch(err){
         if (err.name === 'TokenExpiredError') {
