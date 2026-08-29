@@ -28,7 +28,7 @@ const revenueController = {
     dataSource.query >> 回傳多筆陣列
     偷吃步:: 
     讓資料庫去計算 && 只帶回一筆data
-    memo 回傳的欄位值全轉為小寫 ?
+    why Camel's naming rule in column alias (AS totCourse..) become lower-cases column name from db returning  ?
     1.tot_price 所有課程總額
     2.tot_course 課程總數
     3.cnt_course 教練在當月的有效課數
@@ -81,7 +81,7 @@ const revenueController = {
       course_count : intCntCourse
     }
    
-    console.log(dataTotal) ;
+    //console.log(dataTotal) ;
     
     res.status(200).json({ 
       status: 'success', 
